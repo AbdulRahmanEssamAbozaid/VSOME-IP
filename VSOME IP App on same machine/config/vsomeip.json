@@ -1,0 +1,32 @@
+{
+  "unicast": "127.0.0.1",
+
+  "logging": {
+    "level": "debug",
+    "console": "true",
+    "file": { "enable": "false" },
+
+    "format": {
+      "enable": "true",
+
+      "pattern": "\u001b[38;5;81m[VSOMEIP]\u001b[0m "
+                 "\u001b[38;5;214m%t\u001b[0m "
+                 "\u001b[38;5;39m%l\u001b[0m "
+                 "\u001b[38;5;82m%v\u001b[0m"
+    }
+  },
+
+  "applications": [
+    { "name": "server-app", "id": "0x1111" },
+    { "name": "client-app", "id": "0x2222" }
+  ],
+
+  "services": [
+    {
+      "service": "0x1234",
+      "instance": "0x5678",
+      "reliable": "30490",
+      "unreliable": "30491"
+    }
+  ]
+}
